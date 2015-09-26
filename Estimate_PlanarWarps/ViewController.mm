@@ -30,20 +30,20 @@ using namespace std;
     
     // 3D planar points of the Prince Computer Vision textbook (in cm)
     arma::fmat W;
-    W << 0.0 << 18.3 << 18.3 <<  0.0 << arma::endr
-      << 0.0 <<  0.0 << 26.1 << 26.1 << arma::endr
+    W << 0.0 << 18.2 << 18.2 <<  0.0 << arma::endr
+      << 0.0 <<  0.0 << 26.0 << 26.0 << arma::endr
       << 0.0 <<  0.0 <<  0.0 << 0.0;
     
     // Corresponding 2D projected points of the book in the image
     arma::fmat X;
-    X << 482 << 1688 << 2180 <<  62 << arma::endr
-      << 809 <<  782 << 2216 << 2291;
+    X << 483 << 1704 << 2175 <<  67 << arma::endr
+      << 810 <<  781 << 2217 << 2286;
     
     // Intrinsics matrix for the device it was caputured from...
     arma::fmat K;
-    K << 1627 <<    0 << 1224 << arma::endr
-      <<    0 << 1627 << 1632 << arma::endr
-      <<    0 <<    0 <<    1;
+    K << 3043.72 <<       0 << 1196 << arma::endr
+      <<       0 << 3043.72 << 1604 << arma::endr
+      <<       0 <<    0    <<    1;
     
     // Load the 3D sphere points (dimensions of ball are in cm)
     NSString *str = [[NSBundle mainBundle] pathForResource:@"sphere" ofType:@"txt"];
@@ -59,6 +59,7 @@ using namespace std;
     imageView_ = [[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, self.view.frame.size.height)];
     // Important: add OpenCV_View as a subview
     [self.view addSubview:imageView_];
+    
     // Ensure aspect ratio looks correct
     imageView_.contentMode = UIViewContentModeScaleAspectFit;
     

@@ -51,7 +51,7 @@ fmat myproj_affine(fmat &W, fmat &A) {
 // <out>
 // H = 3x3 homography matrix
 fmat myfit_homography(fmat &X, fmat &W) {
-
+    
     // Fill in the answer here.....
     fmat H; return H;
 }
