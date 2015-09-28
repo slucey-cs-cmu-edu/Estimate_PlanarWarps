@@ -30,7 +30,6 @@ fmat myfit_affine(fmat &X, fmat &W) {
 //
 // <in>
 // W = concatenated matrix of 3D points on the plane (3XN)
-// rho = scalaling factor with the affine warp
 // A = 2x3 matrix of affine parameters
 //
 // <out>
